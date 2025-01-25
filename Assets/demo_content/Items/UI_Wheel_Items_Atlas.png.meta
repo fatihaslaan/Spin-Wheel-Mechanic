@@ -1,0 +1,849 @@
+fileFormatVersion: 2
+guid: fe40d063da4d13a498b8f38c5fc289fe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui_Atlas_card_icon_death
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 853
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7bbeb3c0007864a9573b158b9907e8
+      internalID: -561062186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_chest_Bronze_nolight
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1600
+        width: 512
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa40df3d08ebda044b5c425e2f8dbaa0
+      internalID: 597941572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_chest_big_nolight
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1600
+        width: 512
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f4936310610e44086078e9c2ee341e
+      internalID: -1878534716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_chest_gold_nolight
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1600
+        width: 512
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d8e418977cb944a9794d810ce2534b
+      internalID: 1358032748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_chest_silver_nolight
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 1600
+        width: 512
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f823505efdad574a9c2edb23b4345bf
+      internalID: -1781368169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_chest_small_noligt
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1371
+        width: 512
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a946fbf899eca42ae3ed71b2bee6d9
+      internalID: 985450236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_chest_standart_nolight
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1371
+        width: 512
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e3911ca45200c44981e6b2d51bc85d
+      internalID: 1382638274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_chest_super_nolight
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1371
+        width: 512
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1a101963f1eac4195627123f9d643a
+      internalID: 1008740215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_aviator_glasses_easter
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f2812d72e0a7249ad54c06f73a0e06
+      internalID: 208917437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_baseball_cap_easter
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 365
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4447494bf5283f949a7b525fe5740f02
+      internalID: 290984976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_cash
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1914
+        width: 328
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652dfff07d8cf20478a28fdf7ce1e677
+      internalID: -268581235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_icon_gold
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 1375
+        width: 400
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22524215b1e34443b9bd10a12a0ac93
+      internalID: -204099892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_helmet_pumpkin
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 606
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34b193b4036ef549a10249888b1749e
+      internalID: 1213244530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_mle_bayonet_easter_time
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 612
+        width: 720
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4405567f20183b49a1a318a94291fa0
+      internalID: 1290202162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_mle_bayonet_summer_vice
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 367
+        width: 720
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe849013337b4f84f82dd86c27634d73
+      internalID: 383991201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_render_cons_grenade_m26
+      rect:
+        serializedVersion: 2
+        x: 2168
+        y: 2058
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94de0b2cafbaabf45b191478e7f9bf34
+      internalID: -499514816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_render_cons_grenade_m67
+      rect:
+        serializedVersion: 2
+        x: 2168
+        y: 1546
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ca07f56d48c76438b8f7d925765aa6
+      internalID: -899968022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_render_cons_healthshot_2_neurostim
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1029
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a19490af936fa47b6d5bf9f1f19232
+      internalID: -1659073172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_render_cons_healthshot_2_regenerator
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 519
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6219dca1dd57b04e8806d048a5a1f1f
+      internalID: -43548580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_Atlas_icon_render_t_cons_molotov
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe21014789d7eed43a10c846c46f73a0
+      internalID: -1392231328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icon_Renders_tier1_shotgun
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 2330
+        width: 720
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6923e5c629268374c9c05ce550fc98f0
+      internalID: 1388828933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icon_Renders_tier2_mle
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 2330
+        width: 720
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a480df6aff96984cb607357dcc0473b
+      internalID: 1174703582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icon_Renders_tier2_rifle
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 2330
+        width: 720
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546bddd4c3363a349b13c8d2acea4af8
+      internalID: -1171873686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icon_Renders_tier3_shotgun
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2093
+        width: 720
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d22dbb5806dc934bbb7fcd8d1bfd6c5
+      internalID: 1635127287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icon_Renders_tier3_smg
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 2088
+        width: 720
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6157e6619d3e84b8143b4240ddc24c
+      internalID: -1958766860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icon_Renders_tier3_sniper
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 2087
+        width: 720
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4af935a2ec4cd488da31d34d027e4e
+      internalID: 270639081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icons_Armor_Points
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1829
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2121ae61554600941b55c802304f1787
+      internalID: -107577959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icons_Knife_Points
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1829
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2231cca90e4101644920c7bfe8ad89c5
+      internalID: -441954368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icons_Pistol_Points
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1829
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38793c222fee5444b7442ffca140d31
+      internalID: 746732408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icons_Rifle_Points
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1829
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0e1a2d8bdfc1c49bea4c533e0b2995
+      internalID: -1687918005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icons_Shotgun_Points
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 1829
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c433973a8596a24b9086ac844778e06
+      internalID: -588494901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icons_SMG_Points
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 1829
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0263ae4a2fe508242830a63d3d311933
+      internalID: -2026871717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Atlas_Icons_Sniper_Points
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1829
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a6fecc8e6a01c4ea0f167088303f0c
+      internalID: -409084834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      UI_Atlas_Icon_Renders_tier1_shotgun: 1388828933
+      UI_Atlas_Icon_Renders_tier2_mle: 1174703582
+      UI_Atlas_Icon_Renders_tier2_rifle: -1171873686
+      UI_Atlas_Icon_Renders_tier3_shotgun: 1635127287
+      UI_Atlas_Icon_Renders_tier3_smg: -1958766860
+      UI_Atlas_Icon_Renders_tier3_sniper: 270639081
+      UI_Atlas_Icons_Armor_Points: -107577959
+      UI_Atlas_Icons_Knife_Points: -441954368
+      UI_Atlas_Icons_Pistol_Points: 746732408
+      UI_Atlas_Icons_Rifle_Points: -1687918005
+      UI_Atlas_Icons_SMG_Points: -2026871717
+      UI_Atlas_Icons_Shotgun_Points: -588494901
+      UI_Atlas_Icons_Sniper_Points: -409084834
+      UI_Atlas_icon_cash: -268581235
+      UI_Atlas_icon_chest_Bronze_nolight: 597941572
+      UI_Atlas_icon_chest_big_nolight: -1878534716
+      UI_Atlas_icon_chest_gold_nolight: 1358032748
+      UI_Atlas_icon_chest_silver_nolight: -1781368169
+      UI_Atlas_icon_chest_small_noligt: 985450236
+      UI_Atlas_icon_chest_standart_nolight: 1382638274
+      UI_Atlas_icon_chest_super_nolight: 1008740215
+      UI_Atlas_icon_gold: -204099892
+      ui_Atlas_card_icon_death: -561062186
+      ui_Atlas_icon_aviator_glasses_easter: 208917437
+      ui_Atlas_icon_baseball_cap_easter: 290984976
+      ui_Atlas_icon_helmet_pumpkin: 1213244530
+      ui_Atlas_icon_mle_bayonet_easter_time: 1290202162
+      ui_Atlas_icon_mle_bayonet_summer_vice: 383991201
+      ui_Atlas_icon_render_cons_grenade_m26: -499514816
+      ui_Atlas_icon_render_cons_grenade_m67: -899968022
+      ui_Atlas_icon_render_cons_healthshot_2_neurostim: -1659073172
+      ui_Atlas_icon_render_cons_healthshot_2_regenerator: -43548580
+      ui_Atlas_icon_render_t_cons_molotov: -1392231328
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
