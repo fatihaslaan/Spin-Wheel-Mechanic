@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5019219117458451227}
   - component: {fileID: 5019219117458451221}
   - component: {fileID: 5019219117458451220}
-  - component: {fileID: 2501942271300747852}
+  - component: {fileID: 6560997680094837975}
   m_Layer: 5
   m_Name: Image_Wheel_Reward_1
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2501942271300747852
+--- !u!114 &6560997680094837975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,10 +87,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5019219117458451226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306c31458adc7c642a3493ad7d0fcbe1, type: 3}
+  m_Script: {fileID: 11500000, guid: fa8117336c0aa8d4797c0278dcacc081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rewardText: {fileID: 5019219118113362048}
+  _itemText: {fileID: 5019219118113362048}
 --- !u!1 &5019219118113362054
 GameObject:
   m_ObjectHideFlags: 0
