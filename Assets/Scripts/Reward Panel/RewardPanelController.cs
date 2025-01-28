@@ -56,6 +56,11 @@ namespace RewardPanel
 
         private void LeaveWithRewards()
         {
+            EarnableItem earnedItem = _itemPanelController.GetItems().Find(x => x.Item == Items.Gold);
+            if (earnedItem != null)
+            {
+                User.AddMoney(earnedItem.Value);
+            }
             PopupDisplayer.ShowItemPopup(WheelConstants.GAME_OVER_TITLE, WheelConstants.GAME_OVER_MESSAGE, _itemPanelController.GetItems(), WheelConstants.RESTART, WheelManager.OnItemsRecieved);
         }
 

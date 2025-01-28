@@ -104,7 +104,10 @@ namespace WheelMechanic
 
         private void Continue()
         {
-            Debug.Log("cont");
+            User.UseMoney(WheelConstants.CONTINUE_COST, null, () =>
+            {
+                PopupDisplayer.ShowItemPopup(WheelConstants.NO_MONEY_TITLE, WheelConstants.NO_MONEY_MESSAGE, null, WheelConstants.RESTART, Restart);
+            });
         }
     }
 }

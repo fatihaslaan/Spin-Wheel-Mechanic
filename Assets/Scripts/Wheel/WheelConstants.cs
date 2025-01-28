@@ -13,6 +13,8 @@ namespace WheelMechanic
 
         public const string BOMB_EXPLODE_TITLE = "Oh No A Bomb Exploded";
         public const string BOMB_EXPLODE_MESSAGE = "You Will Lose All Items If You Don't Pay To Continue";
+        public const string NO_MONEY_TITLE = "No Money";
+        public const string NO_MONEY_MESSAGE = "You Don't Have Enough Money";
         public const string GAME_OVER_TITLE = "Game Over You Won";
         public const string GAME_OVER_MESSAGE = "You Won These Items! Don't Worry You Can Win Again!";
         public const string RESTART = "Restart";
@@ -23,5 +25,7 @@ namespace WheelMechanic
         public const string FREE_ITEM_FROM_STAGE_MESSAGE = "You Will Earn These Items On This Stage";
 
         public const float WHEEL_SPIN_TIME = 2f;
+
+        public const int CONTINUE_COST = 100;
     }
 }
