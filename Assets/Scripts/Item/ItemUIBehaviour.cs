@@ -1,7 +1,12 @@
+using DG.Tweening;
+using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using Util;
+using WheelMechanic;
 
 namespace Item
 {
@@ -10,8 +15,25 @@ namespace Item
         [SerializeField] private TextMeshProUGUI _itemText;
         [SerializeField] private Image _itemImage;
 
+
         private EarnableItem _earnableItem;
         public EarnableItem EarnableItem { get { return _earnableItem; } }
+
+        private AsyncOperationHandle _asyncItemOperation;
+        private GameObject _rarityBackground;
+
+        private void OnDestroy()
+        {
+            ReleaseAsyncOperation();
+        }
+
+        private void ReleaseAsyncOperation()
+        {
+            if (_asyncItemOperation.IsValid())
+            {
+                Addressables.Release(_asyncItemOperation);
+            }
+        }
 
         public void SetItem(EarnableItem item)
         {
@@ -21,6 +43,28 @@ namespace Item
             {
                 _itemImage.sprite = itemData.Sprite;
                 _itemText.text = _earnableItem.Value > 0 ? ("x" + _earnableItem.Value) : string.Empty;
+
+                if (_rarityBackground)
+                {
+                    Destroy(_rarityBackground);
+                }
+                ReleaseAsyncOperation();
+                if (CheckAddressableKeyExists(ItemConstants.IMAGE_ITEM_BACKGROUND_ + itemData.Rarity))
+                {
+                    _asyncItemOperation = Addressables.LoadAssetAsync<GameObject>(ItemConstants.IMAGE_ITEM_BACKGROUND_ + itemData.Rarity);
+                    _asyncItemOperation.Completed += ItemLoaded;
+
+                    void ItemLoaded(AsyncOperationHandle handle)
+                    {
+                        GameObject rarityBackground = handle.Result as GameObject; // Get Button
+                        if (rarityBackground != null)
+                        {
+                            _rarityBackground = Instantiate(rarityBackground, transform);
+                            _rarityBackground.transform.SetSiblingIndex(0);
+                            _rarityBackground.transform.position = _itemImage.transform.position;
+                        }
+                    }
+                }
             }
             else
             {
@@ -28,10 +72,31 @@ namespace Item
             }
         }
 
+        private bool CheckAddressableKeyExists(string key)
+        {
+            foreach (var locator in Addressables.ResourceLocators)
+            {
+                if (locator.Keys.Contains(key))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public void AddValue(int value)
         {
-            _earnableItem.AddValue(value);
-            _itemText.text = "x" + _earnableItem.Value;
+            float temp = (float)_earnableItem.Value;
+
+            DOTween.To(() => temp, x =>
+            {
+                temp = x;
+                _itemText.text = "x" + Mathf.FloorToInt(temp);
+            }, _earnableItem.Value + value, WheelConstants.WHEEL_SPIN_TIME / 4).SetEase(Ease.InCubic).OnComplete(() =>
+            {
+                _earnableItem.AddValue(value);
+            });
+
         }
 
         private void OnValidate()

@@ -24,6 +24,8 @@ namespace RewardPanel
             WheelManager.OnRewardTaken += AddRewardToPanel;
             WheelManager.OnReset += ClearRewards;
             OnLeave += LeaveWithRewards;
+
+            WheelController.OnSpinAnimationStart += SpinStarted;
         }
 
         private void OnDisable()
@@ -31,15 +33,24 @@ namespace RewardPanel
             WheelManager.OnRewardTaken -= AddRewardToPanel;
             WheelManager.OnReset -= ClearRewards;
             OnLeave -= LeaveWithRewards;
+
+            WheelController.OnSpinAnimationStart -= SpinStarted;
+        }
+
+        private void SpinStarted()
+        {
+            _leaveButton.interactable = false;
         }
 
         private void AddRewardToPanel(EarnableItem item)
         {
             _itemPanelController.AddItemToPanel(item, WheelConstants.EO_REWARD_ITEM_DATA);
+            _leaveButton.interactable = true;
         }
 
         private void ClearRewards()
         {
+            _leaveButton.interactable = false;
             _itemPanelController.ClearPanel();
         }
 

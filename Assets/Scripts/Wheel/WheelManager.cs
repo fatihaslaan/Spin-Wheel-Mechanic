@@ -2,8 +2,6 @@
 using RewardPanel;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using Util;
 
@@ -20,10 +18,10 @@ namespace WheelMechanic
 
         public static Action<List<SpecialStage>, int> OnGameStart;
         public static Action OnReset;
+
         private int _currentWheelIndex;
         private EarnableItem _itemFromSpin;
 
-        private List<WheelContent> _wheelDatas = new();
         private List<SpecialStage> _specialStages;
         private int _wheelCount;
 

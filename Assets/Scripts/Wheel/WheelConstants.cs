@@ -21,5 +21,7 @@ namespace WheelMechanic
         public const string FREE_ITEM_FROM_STAGE_TITLE = "Free Items";
         public const string FREE_ITEM_EARNED_FROM_STAGE_MESSAGE = "You Got Free Items From Special Stage";
         public const string FREE_ITEM_FROM_STAGE_MESSAGE = "You Will Earn These Items On This Stage";
+
+        public const float WHEEL_SPIN_TIME = 2f;
     }
 }

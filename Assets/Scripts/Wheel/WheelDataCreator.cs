@@ -12,7 +12,7 @@ namespace WheelMechanic
         [SerializeField] private List<Items> _includeInEveryStage = new List<Items> { Items.Bomb };
         [SerializeField] private List<SpecialStage> _specialStages;
         private Dictionary<ItemRarity, float> tempRarityChances = new();
-        [Min(1)] [SerializeField] private int _wheelCount = 1;
+        [Min(1)][SerializeField] private int _wheelCount = 1;
         private List<Items> _tempIncludeList;
 
         private float _rarityMultiplier = 1f;
@@ -67,7 +67,7 @@ namespace WheelMechanic
         private void CreateWheelContent(SpecialStage stage)
         {
             WheelContent wheelContent = new();
-            if(_useEditorList)
+            if (_useEditorList)
             {
                 wheelContent = _wheelDatas[_currentIndex];
                 _currentIndex++;
@@ -77,8 +77,7 @@ namespace WheelMechanic
                 _tempIncludeList = new List<Items>(_includeInEveryStage);
                 SetStageProperties(stage);
                 wheelContent = GenerateWheelContent();
-                tempRarityChances = tempRarityChances.Where(x => !WheelConstants.EXCLUDED_FROM_MULTIPLIER.Contains(x.Key)).ToDictionary(x => x.Key, x => x.Value * WheelConstants.CHANCE_MULTIPLIER_BY_EACH_STAGE);
-
+                tempRarityChances = tempRarityChances.ToDictionary(x => x.Key, x => (!WheelConstants.EXCLUDED_FROM_MULTIPLIER.Contains(x.Key)) ? x.Value * WheelConstants.CHANCE_MULTIPLIER_BY_EACH_STAGE : x.Value);
             }
             OnWheelContentCreated?.Invoke(wheelContent);
 
@@ -114,8 +113,9 @@ namespace WheelMechanic
 
             for (int i = 0; i < WheelConstants.WHEEL_SLICE_COUNT; i++)
             {
+
                 ItemData tempData;
-                if(assignedItemIndexes.Contains(i))
+                if (assignedItemIndexes.Contains(i))
                 {
                     tempData = ItemDataManager.Instance.itemDatas.Find(x => x.Item == _tempIncludeList[0]); //Asign Included Items To Wheel
                     _tempIncludeList.RemoveAt(0);
@@ -128,18 +128,18 @@ namespace WheelMechanic
             }
             return wheelContent;
 
-            float GetRarityValue()
+            int GetRarityValue()
             {
-                return (float)(_random.NextDouble() * tempRarityChances.Values.Sum());
+                return _random.Next(0,(int)tempRarityChances.Values.Sum());
             }
 
             ItemData GetRandomItem(float rarityVal) //Get Random Item With Rarity (If Not Using Editor Data)
             {
                 float tempVal = 0f;
                 ItemRarity selectedRarity = ItemRarity.Legendary;
-                foreach (ItemRarity rarity in ItemConstants.RARITY_CHANCES.Keys)
+                foreach (ItemRarity rarity in tempRarityChances.Keys)
                 {
-                    tempVal += ItemConstants.RARITY_CHANCES[rarity];
+                    tempVal += tempRarityChances[rarity];
                     if (rarityVal <= tempVal)
                     {
                         selectedRarity = rarity;
@@ -181,7 +181,7 @@ namespace WheelMechanic
                         _wheelDatas.RemoveAt(0);
                     }
                 }
-                if(_wheelDatas.Count < _wheelCount)
+                if (_wheelDatas.Count < _wheelCount)
                 {
                     while (_wheelDatas.Count < _wheelCount)
                     {
@@ -195,14 +195,14 @@ namespace WheelMechanic
                         Debug.LogError("Don't change the Size of Wheel Slice Count");
                         Array.Resize(ref _wheelDatas[i].wheelItems, WheelConstants.WHEEL_SLICE_COUNT);
                     }
-                    for(int j = 0; j< _wheelDatas[i].wheelItems.Length;j++)
+                    for (int j = 0; j < _wheelDatas[i].wheelItems.Length; j++)
                     {
                         if (_wheelDatas[i].wheelItems[j].Item == Items.None)
                         {
                             Debug.LogError("Can't Be Null Changing To Cash");
                             _wheelDatas[i].wheelItems[j] = new EarnableItem(Items.Cash, 100);
                         }
-                        if(_wheelDatas[i].wheelItems[j].Item != Items.Bomb && _wheelDatas[i].wheelItems[j].Value < 1)
+                        if (_wheelDatas[i].wheelItems[j].Item != Items.Bomb && _wheelDatas[i].wheelItems[j].Value < 1)
                         {
                             Debug.LogError("Can't Be 0 Value Unless It's Bomb");
                         }
@@ -213,10 +213,10 @@ namespace WheelMechanic
             else
             {
                 _specialStages = _specialStages.OrderByDescending(x => x.EveryRaundOf).ToList();
-                if (_tempIncludeList.Count > WheelConstants.WHEEL_SLICE_COUNT)
+                if (_includeInEveryStage.Count > WheelConstants.WHEEL_SLICE_COUNT)
                 {
                     Debug.LogError("Include List Can't Be Higher Than Slice Count");
-                    _tempIncludeList.Clear();
+                    _includeInEveryStage.Clear();
                 }
             }
         }

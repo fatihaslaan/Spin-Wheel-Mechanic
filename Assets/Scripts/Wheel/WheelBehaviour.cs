@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Item;
 using System;
 using System.Collections.Generic;
@@ -42,8 +43,17 @@ namespace WheelMechanic
 
         public void SpinWheel(int wheelIndex, Action onSpinComplete)
         {
-            //_wheelImage.DoRotate()
-            onSpinComplete?.Invoke();
+            _wheelIndicatorImage.transform.DORotate(new Vector3(0, 0, -45), WheelConstants.WHEEL_SPIN_TIME / 4f).OnComplete(() =>
+            {
+                _wheelIndicatorImage.transform.DOShakeRotation(WheelConstants.WHEEL_SPIN_TIME / 2f, 45).OnComplete(() =>
+                {
+                    _wheelIndicatorImage.transform.DORotate(new Vector3(0, 0, 0), WheelConstants.WHEEL_SPIN_TIME / 4f).SetEase(Ease.InCubic);
+                });
+            });
+            _wheelImage.transform.DORotate(new Vector3(0, 0, transform.rotation.eulerAngles.z +  720 + (wheelIndex * 45)), WheelConstants.WHEEL_SPIN_TIME, RotateMode.FastBeyond360).OnComplete(() =>
+            {
+                onSpinComplete?.Invoke();
+            });
         }
 
         private void OnValidate()

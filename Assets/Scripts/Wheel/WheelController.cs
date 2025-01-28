@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Util;
@@ -10,6 +11,8 @@ namespace WheelMechanic
         [SerializeField] private Button _wheelSpinButton;
 
         private WheelContent wheelContent = new();
+
+        public static Action OnSpinAnimationStart;
 
         private void Awake()
         {
@@ -48,11 +51,14 @@ namespace WheelMechanic
         public void SpinWheel()
         {
             int randomSliceIndex = GetRandomWheelSlice();
-            _wheelBehaviour.SpinWheel(GetRandomWheelSlice(), OnSpinComplete);
+            _wheelBehaviour.SpinWheel(randomSliceIndex, OnSpinComplete);
+            _wheelSpinButton.interactable = false;
+            OnSpinAnimationStart?.Invoke();
 
             void OnSpinComplete()
             {
                 //I think getting item from backend would be safer approach
+                _wheelSpinButton.interactable = true;
                 WheelManager.OnSpinComplete?.Invoke(wheelContent.wheelItems[randomSliceIndex]);
             }
 

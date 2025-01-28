@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using Util;
@@ -46,8 +47,10 @@ namespace StagePanel
         {
             _currentStage++;
             _stages[_currentStage].PassStage();
-            _rectTransform.localPosition += new Vector3(-_stagePrefabSize, 0, 0);
-            _stages[_currentStage + 1].SetSprite(stage ? stage.StageIndexSprite : null);
+            _rectTransform.DOLocalMove(_rectTransform.transform.localPosition + new Vector3(-_stagePrefabSize, 0, 0), WheelConstants.WHEEL_SPIN_TIME / 4).OnComplete(() =>
+            {
+                _stages[_currentStage + 1].SetSprite(stage ? stage.StageIndexSprite : null);
+            });
         }
 
         private void SetStage(List<SpecialStage> specialStages, int wheelCount)
