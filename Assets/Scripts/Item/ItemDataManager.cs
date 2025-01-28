@@ -1,3 +1,4 @@
+using Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,42 +6,46 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class ItemDataManager : Singleton<ItemDataManager>
+namespace Item
 {
-    //We Wouldn't Need That Class If We Had Backend
-    [HideInInspector] public List<ItemData> itemDatas = new();
-
-    public Action OnDataLoad;
-
-    private AsyncOperationHandle<IList<ItemData>> _itemDataListAsyncOperation;
-
-    protected override void Awake()
+    public class ItemDataManager : Singleton<ItemDataManager>
     {
-        base.Awake();
-        LoadItems();
-    }
+        //We Wouldn't Need That Class If We Had Backend
+        //For Loading Items Once
+        public static Action OnDataLoad;
+        public List<ItemData> itemDatas { get { return _itemDatas; } }
+        private List<ItemData> _itemDatas = new();
 
-    private void OnDestroy()
-    {
-        Addressables.Release(_itemDataListAsyncOperation);
-    }
+        private AsyncOperationHandle<IList<ItemData>> _itemDataListAsyncOperation;
 
-    private void LoadItems()
-    {
-        _itemDataListAsyncOperation = Addressables.LoadAssetsAsync<ItemData>(Constants.SO_ITEM_LABEL_NAME, null);
-        _itemDataListAsyncOperation.Completed += ItemsLoaded;
-    }
-
-    private void ItemsLoaded(AsyncOperationHandle<IList<ItemData>> handle)
-    {
-        if (handle.Status == AsyncOperationStatus.Succeeded)
+        protected override void Awake()
         {
-            itemDatas = handle.Result.ToList();
-            OnDataLoad?.Invoke();
+            base.Awake();
+            LoadItems();
         }
-        else
+
+        private void OnDestroy()
         {
-            Debug.LogError("Failed to load items.");
+            Addressables.Release(_itemDataListAsyncOperation);
+        }
+
+        private void LoadItems()
+        {
+            _itemDataListAsyncOperation = Addressables.LoadAssetsAsync<ItemData>(ItemConstants.ITEM, null);
+            _itemDataListAsyncOperation.Completed += ItemsLoaded;
+        }
+
+        private void ItemsLoaded(AsyncOperationHandle<IList<ItemData>> handle)
+        {
+            if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                _itemDatas = handle.Result.ToList();
+                OnDataLoad?.Invoke();
+            }
+            else
+            {
+                Debug.LogError("Failed to load items.");
+            }
         }
     }
 }

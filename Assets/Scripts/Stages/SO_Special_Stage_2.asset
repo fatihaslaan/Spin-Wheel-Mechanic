@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: SO_Special_Stage_2
   m_EditorClassIdentifier: 
   _stageName: Super Zone
-  _raund: 10
+  _everyRaundOf: 30
   _multiplier: 1.5
   _wheelSprite: {fileID: 21300000, guid: 6562edd669e25fd48b9888d51e2ced54, type: 3}
   _wheelIndicatorSprite: {fileID: 21300000, guid: 0a4d376326851f148bacb612b8c885bc, type: 3}
-  _stageIndexSprite: {fileID: 0}
+  _stageIndexSprite: {fileID: -1031724260, guid: 9bb5246b0506779418b672ecad2584ad, type: 3}
+  _stageTextColor: {r: 0.061235905, g: 0, b: 1, a: 1}
+  _includeItems: 
+  _excludeItems: 21000000
+  _freeItemsAfterEveryStageByOrder:
+  - _items:
+    - _item: 28
+      _value: 1

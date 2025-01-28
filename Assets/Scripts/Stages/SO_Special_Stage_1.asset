@@ -13,8 +13,21 @@ MonoBehaviour:
   m_Name: SO_Special_Stage_1
   m_EditorClassIdentifier: 
   _stageName: Safe Zone
-  _raund: 5
+  _everyRaundOf: 5
   _multiplier: 1.2
   _wheelSprite: {fileID: 21300000, guid: bf64eca48c035a24fb0989ed703313ca, type: 3}
   _wheelIndicatorSprite: {fileID: 21300000, guid: 1801b6ee42f6f124ca2a6754a76beb04, type: 3}
-  _stageIndexSprite: {fileID: 0}
+  _stageIndexSprite: {fileID: -1018997911, guid: 9bb5246b0506779418b672ecad2584ad, type: 3}
+  _stageTextColor: {r: 0.1358285, g: 1, b: 0, a: 1}
+  _includeItems: 
+  _excludeItems: 21000000
+  _freeItemsAfterEveryStageByOrder:
+  - _items:
+    - _item: 1
+      _value: 3062
+    - _item: 2
+      _value: 270
+  - _items: []
+  - _items:
+    - _item: 2
+      _value: 55
