@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using User;
 using Util;
 using WheelMechanic;
 
@@ -59,7 +60,7 @@ namespace RewardPanel
             EarnableItem earnedItem = _itemPanelController.GetItems().Find(x => x.Item == Items.Gold);
             if (earnedItem != null)
             {
-                User.AddMoney(earnedItem.Value);
+                UserCurrency.AddMoney(earnedItem.Value);
             }
             PopupDisplayer.ShowItemPopup(WheelConstants.GAME_OVER_TITLE, WheelConstants.GAME_OVER_MESSAGE, _itemPanelController.GetItems(), WheelConstants.RESTART, WheelManager.OnItemsRecieved);
         }

@@ -3,6 +3,7 @@ using RewardPanel;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using User;
 using Util;
 
 namespace WheelMechanic
@@ -91,7 +92,7 @@ namespace WheelMechanic
                 SetCurrentWheel();
                 OnNextWheel?.Invoke(_specialStages.Find(x => _currentWheelIndex % x.EveryRaundOf == 0));
             }
-            else
+            else //Game Over
                 RewardPanelController.OnLeave?.Invoke();
         }
 
@@ -104,7 +105,7 @@ namespace WheelMechanic
 
         private void Continue()
         {
-            User.UseMoney(WheelConstants.CONTINUE_COST, null, () =>
+            UserCurrency.UseMoney(WheelConstants.CONTINUE_COST, null, () =>
             {
                 PopupDisplayer.ShowItemPopup(WheelConstants.NO_MONEY_TITLE, WheelConstants.NO_MONEY_MESSAGE, null, WheelConstants.RESTART, Restart);
             });

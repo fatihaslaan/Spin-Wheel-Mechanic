@@ -1,38 +1,42 @@
 using TMPro;
 using UnityEngine;
+using User;
 
-public class CurrencyController : MonoBehaviour
+namespace Currency
 {
-    [SerializeField] TextMeshProUGUI _textMoney;
-
-    private void Awake()
+    public class CurrencyController : MonoBehaviour
     {
-        SetMoney(User.Money);
-    }
+        [SerializeField] TextMeshProUGUI _textMoney;
 
-    private void OnEnable()
-    {
-        User.OnMoneyChanged += SetMoney;
-    }
-
-    private void OnDisable()
-    {
-        User.OnMoneyChanged -= SetMoney;
-    }
-
-    private void SetMoney(int newMoney)
-    {
-        _textMoney.text = newMoney.ToString();
-    }
-
-    private void OnValidate()
-    {
-        if(_textMoney == null)
+        private void Awake()
         {
-            _textMoney = GetComponent<TextMeshProUGUI>();
-            if( _textMoney == null )
+            SetMoney(UserCurrency.Money);
+        }
+
+        private void OnEnable()
+        {
+            UserCurrency.OnMoneyChanged += SetMoney;
+        }
+
+        private void OnDisable()
+        {
+            UserCurrency.OnMoneyChanged -= SetMoney;
+        }
+
+        private void SetMoney(int newMoney)
+        {
+            _textMoney.text = newMoney.ToString();
+        }
+
+        private void OnValidate()
+        {
+            if (_textMoney == null)
             {
-                Debug.LogError("Failed To Set Currency Text");
+                _textMoney = GetComponent<TextMeshProUGUI>();
+                if (_textMoney == null)
+                {
+                    Debug.LogError("Failed To Set Currency Text");
+                }
             }
         }
     }

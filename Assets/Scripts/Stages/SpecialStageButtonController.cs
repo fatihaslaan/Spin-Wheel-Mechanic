@@ -46,7 +46,7 @@ namespace WheelMechanic
             List<int> temp = new();
             foreach (SpecialStageButtonBehaviour specialStageButton in _specialStageButtonBehaviours)
             {
-                if(temp.Contains((((_currentStageIndex + 1) / specialStageButton.SpecialStage.EveryRaundOf) + 1) * specialStageButton.SpecialStage.EveryRaundOf))
+                if(temp.Contains((((_currentStageIndex + 1) / specialStageButton.SpecialStage.EveryRaundOf) + 1) * specialStageButton.SpecialStage.EveryRaundOf)) //Don't Use Safe Zone If There Is Super Zone
                 {
                     continue;
                 }

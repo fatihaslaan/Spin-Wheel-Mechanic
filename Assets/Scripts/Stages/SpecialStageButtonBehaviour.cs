@@ -21,13 +21,13 @@ namespace WheelMechanic
 
         public void SetNextStage(int nextStage)
         {
-            if (_specialStageIndex != (nextStage / _specialStage.EveryRaundOf) + 1)
+            if (_specialStageIndex != (nextStage / _specialStage.EveryRaundOf) + 1) //Did We Already Set It?
             {
                 _specialStageIndex = (nextStage / _specialStage.EveryRaundOf) + 1;
 
                 _button.enabled = false;
                 _freeItemImage.enabled = false;
-                if (_wheelCount < _specialStage.EveryRaundOf * _specialStageIndex)
+                if (_wheelCount < _specialStage.EveryRaundOf * _specialStageIndex) //Is Next Stage Available?
                 {
                     gameObject.SetActive(false);
                     return;
@@ -35,7 +35,7 @@ namespace WheelMechanic
                 else if(!gameObject.activeSelf) gameObject.SetActive(true);
 
                 _stageValueText.text = (_specialStage.EveryRaundOf * _specialStageIndex).ToString();
-                if (_specialStage.FreeItemsAfterEveryStageByOrder.Count > _specialStageIndex - 1)
+                if (_specialStage.FreeItemsAfterEveryStageByOrder.Count > _specialStageIndex - 1) //Is There Free Items For Us?
                 {
                     if (_specialStage.FreeItemsAfterEveryStageByOrder[_specialStageIndex - 1].Items.Count > 0)
                     {
